@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En tete de le page -->
+    <header>
+        <h2>Neofront</h2>
+        <nav class="navigbar">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#aboutbox">A propos</a></li>
+                <li><a href="#project">Projets</a></li>
+                <li><a href="#competence">Competances</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="BurgerBtn"><img src="img/menu-btn.png" class="opens" alt=""></div>
+    </header>
+
+
+    <!-- Section Hero du portfolio -->
+    <section class="container">
+        <div class="detailbox scroll-scale">
+            <h1><span>Hello,</span> Moi c'est NeoFront!</h1>
+            <p>Développeur front-end passionné.<br> J'aime transformer des idées<br>
+                 en interfaces modernes, claires et intuitives.</p>
+            <div> 
+                <button class="btn1">Mon CV</button> <button class="btn2">Lien vers Github</button>
+            </div>
+            <div class="lienVerReseau"></div>
+        </div>
+        <div class="imgbox scroll-scale">
+            <div class="boximg">
+                <img src="img/profil3.png" alt="Mon image" height="100px">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section A propos du portfolio -->
+    <section id="aboutbox">
+        <div class="boxabout scroll-scale">
+            <div class="img">
+                <div></div>
+            </div>
+            <div class="aboutme scroll-scale">
+                <h2>A propos</h2>
+                <p>
+                    Salut ! Je m'appelle Fawaz, je suis développeur front-end spécialisé dans la création de sites web modernes et réactifs.<br><br>
+                    Passionné par le designe minimaliste et l'expérience utilisateur, je travaille avec <span>HTML, CSS, Javascript</span> pour transformer des idées en projets utilisateurs.<br><br>
+                    Mon objectif est simple : créer des interfaces claires et efficaces qui offrent une vraie valeur aux utilisateurs.
+                    Je suis toujours en apprentissage pour decouvrire de nouvelle chose, j'aime relever de nouveaux défis et collaborer avec des personnes ambitieuses.<br><br>
+                    Si vous cherchez un développeur motivé pour vos projets, je serais ravis d'en discuter avec vous!.
+                </p>
+                <button><a href="#contact">Contactez moi</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section des project du portfolio -->
+    <section id="project" class="project">
+        <h1 class="project">Project</h1>
+        <div class="projectbox scroll-bottom">
+            <div class="projectContainer">
+                <div class="image" style="background: url(img/project-3.jpg);"></div>
+                <div class="detail"></div>
+            </div>
+            <div class="projectContainer">
+                <div class="image" style="background: url(img/project-7.png);"></div>
+                <div class="detail"></div>
+            </div>
+            <div class="projectContainer">
+                <div class="image" style="background: url(img/project-8.jpg);"></div>
+                <div class="detail"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partire Pour les competance -->
+    <section id="competence" class="competence">
+        <div class="main-text scroll-scale">
+            <h1>Mes compétences</h1>
+        </div> 
+
+        <div class="skill-main">
+            <div class="skill-left scroll-scale">
+                <h3>Compétence Technique</h3>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>HTML</p>
+                        <p>90%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>Figma</p>
+                        <p>62%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="figma"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>JavaScript</p>
+                        <p>72%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="javascript"></span>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>CSS</p>
+                        <p>85%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-right scroll-scale">
+                <h3>Compétence professionnel</h3>
+                <div class="professional">
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="90"></div>
+                        <div class="text">
+                            <big>90%</big>
+                            <small>Travail d'équipe</small>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="80"></div>
+                        <div class="text">
+                            <big>80%</big>
+                            <small>Créativité</small>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="55"></div>
+                        <div class="text">
+                            <big>55%</big>
+                            <small>Gestion de project</small>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="70"></div>
+                        <div class="text">
+                            <big>70%</big>
+                            <small>Communication</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contacte -->
+    <section id="contact" class="contact">
+        <div class="scroll-right">
+            <h1>Contectez moi</h1>
+        </div>
+        <div class="formulaire">
+            <form action="" class="scroll-left">
+                <input type="text" class="input" name="nom" id="" placeholder="Entrez votre nom" required>
+                <input type="email" class="input" name="email" id="" placeholder="Entrez votre email" required>
+                <textarea name="message" id="" placeholder="Envoi un message"></textarea>
+                <input type="submit" class="btn" value="Envoi Message">
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
