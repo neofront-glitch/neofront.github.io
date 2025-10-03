@@ -71,20 +71,30 @@ btnMenu.addEventListener("click", () => {
     navig.classList.toggle("show-menu");
 })
 
-// Envoi et resevoire un message par mail /////////////////
-    (function(){
-      emailjs.init("gp8XYFzw1j8GFFj4S");
-    })();
+// Envoi et réception d'un message par mail /////////////////
+(function(){
+    emailjs.init("gp8XYFzw1j8GFFj4S");
+})();
 
-    document.getElementById("formul").addEventListener("submit", function(e) {
-      e.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      emailjs.sendForm("service_a8fs4es", "template_22jea9v", this)
+    const submitBtn = this.querySelector('.btn');
+    const originalText = submitBtn.value;
+    submitBtn.value = 'Envoi en cours...';
+    submitBtn.disabled = true;
+
+    emailjs.sendForm("service_a8fs4es", "template_22jea9v", this)
         .then(() => {
-          alert("✅ Message envoyé avec succès !");
-          this.reset();
+            alert("✅ Message envoyé avec succès !");
+            this.reset();
         }, (err) => {
-            alert("❌ Une erreur est survenue : " + JSON.stringify(err));
-   });
+            console.error("Erreur EmailJS:", err);
+            alert("❌ Une erreur est survenue. Veuillez réessayer.");
+        })
+        .finally(() => {
+            submitBtn.value = originalText;
+            submitBtn.disabled = false;
+        });
 });
 
