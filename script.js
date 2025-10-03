@@ -74,19 +74,28 @@ btnMenu.addEventListener("click", () => {
 function initEmailForm() {
   emailjs.init("Y-jNQ8tZrTdkO2r98");
 
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", function(e) {
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
+    
+    const submitBtn = this.querySelector('.btn');
+    const originalText = submitBtn.value;
+    submitBtn.value = 'Envoi en cours...';
+    submitBtn.disabled = true;
 
     emailjs.sendForm("service_nak2agq", "template_22jea9v", this)
-      .then(() => {
-        alert("✅ Message envoyé !");
-        this.reset();
-      })
-      .catch(err => {
-        alert("❌ Une erreur est survenue : " + JSON.stringify(err));
-      });
-  });
+        .then(() => {
+            // Message de succès plus stylé
+            alert("🎉 Message envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.");
+            this.reset();
+        }, (err) => {
+            console.error("Erreur EmailJS:", err);
+            alert("❌ Une erreur est survenue lors de l'envoi.\nVeuillez réessayer ou me contacter directement à neofront188@gmail.com");
+        })
+        .finally(() => {
+            submitBtn.value = originalText;
+            submitBtn.disabled = false;
+        });
+});
 }
 
 document.addEventListener("DOMContentLoaded", initEmailForm);
