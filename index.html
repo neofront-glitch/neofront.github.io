@@ -175,15 +175,17 @@
             <h1>Contectez moi</h1>
         </div>
         <div class="formulaire">
-            <form action="" class="scroll-left">
-                <input type="text" class="input" name="nom" id="" placeholder="Entrez votre nom" required>
-                <input type="email" class="input" name="email" id="" placeholder="Entrez votre email" required>
-                <textarea name="message" id="" placeholder="Envoi un message"></textarea>
-                <input type="submit" class="btn" value="Envoi Message">
+            <form id="contact-form" class="scroll-left" id="formul">
+                <input type="text" class="input" name="user_name" placeholder="Entrez votre nom" required>
+                <input type="email" class="input" name="user_email" placeholder="Entrez votre email" required>
+                <textarea name="message" placeholder="Envoyez un message" required></textarea>
+                <input type="submit" class="btn" value="Envoyer le message">
             </form>
         </div>
     </section>
 
+    <!-- Partie JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

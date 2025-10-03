@@ -71,3 +71,20 @@ btnMenu.addEventListener("click", () => {
     navig.classList.toggle("show-menu");
 })
 
+// Envoi et resevoire un message par mail /////////////////
+    (function(){
+      emailjs.init("gp8XYFzw1j8GFFj4S");
+    })();
+
+    document.getElementById("formul").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_a8fs4es", "template_22jea9v", this)
+        .then(() => {
+          alert("✅ Message envoyé avec succès !");
+          this.reset();
+        }, (err) => {
+            alert("❌ Une erreur est survenue : " + JSON.stringify(err));
+   });
+});
+
