@@ -34,7 +34,6 @@ function activeMenu() {
 
 activeMenu();
 window.addEventListener("scroll", activeMenu);
-console.log(section);
 
 // Animation au scrolle ///////////////////////////////////
 
@@ -64,37 +63,33 @@ const scrollRight = document.querySelectorAll(".scroll-right");
 scrollRight.forEach((el) => observer.observe(el));
 
 // Burger Menu //////////////////////////
-const btnMenu = document.querySelector(".BurgerBtn");
+const btnMenu = document.querySelector(".burgerBtn");
 const navig = document.querySelector(".navigbar");
 
 btnMenu.addEventListener("click", () => {
     navig.classList.toggle("show-menu");
-})
+});
 
 // Envoi et réception d'un message par mail /////////////////
-(function(){
-    emailjs.init("gp8XYFzw1j8GFFj4S");
-})();
+function initEmailForm() {
+  emailjs.init("Y-jNQ8tZrTdkO2r98");
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const submitBtn = this.querySelector('.btn');
-    const originalText = submitBtn.value;
-    submitBtn.value = 'Envoi en cours...';
-    submitBtn.disabled = true;
+    emailjs.sendForm("service_nak2agq", "template_22jea9v", this)
+      .then(() => {
+        alert("✅ Message envoyé !");
+        this.reset();
+      })
+      .catch(err => {
+        alert("❌ Une erreur est survenue : " + JSON.stringify(err));
+      });
+  });
+}
 
-    emailjs.sendForm("service_a8fs4es", "template_22jea9v", this)
-        .then(() => {
-            alert("✅ Message envoyé avec succès !");
-            this.reset();
-        }, (err) => {
-            console.error("Erreur EmailJS:", err);
-            alert("❌ Une erreur est survenue. Veuillez réessayer.");
-        })
-        .finally(() => {
-            submitBtn.value = originalText;
-            submitBtn.disabled = false;
-        });
-});
+document.addEventListener("DOMContentLoaded", initEmailForm);
+
+// console.log("Service ID:", "service_a8fs4es");
 
