@@ -84,7 +84,7 @@ function initEmailForm() {
 
     emailjs.sendForm("service_nak2agq", "template_22jea9v", this)
         .then(() => {
-            // Message de succès plus stylé
+            
             alert("🎉 Message envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.");
             this.reset();
         }, (err) => {
@@ -100,5 +100,5 @@ function initEmailForm() {
 
 document.addEventListener("DOMContentLoaded", initEmailForm);
 
-// console.log("Service ID:", "service_a8fs4es");
+
 
