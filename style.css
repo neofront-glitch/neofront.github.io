@@ -247,6 +247,106 @@ header div img {
     background: var(--primary-color);
 }
 
+.lienVerReseau {
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: var(--text-color);
+    /* background: red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.lienVerReseau i {
+    margin-right: 20px;
+    transition: color 0.4s;
+    cursor: pointer;
+    /* background: var(--primary-color); */
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px var(--primary-color),
+                -2px -2px 10px var(--primary-color);
+}
+
+/* Ensure icons (font icons and inline SVGs) transition color/fill smoothly */
+.lienVerReseau a,
+.lienVerReseau a i,
+.lienVerReseau a svg {
+    transition: color 0.25s ease, fill 0.25s ease, transform 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reset individual anchor styles so border/padding remain on the clickable area */
+.lienVerReseau a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make the icon container keep the circular border and shadow */
+.lienVerReseau a i,
+.lienVerReseau a svg {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    color: inherit; /* inherit from the link so color hover works */
+}
+
+/* Hover states with brand colors */
+.lienVerReseau a:hover i,
+.lienVerReseau a:hover svg,
+.lienVerReseau a:hover {
+    /* transform: translateY(-4px) scale(1.03); */
+}
+
+.lienVerReseau a[href*="facebook"]:hover,
+.lienVerReseau a[href*="facebook"]:hover i,
+.lienVerReseau a[href*="facebook"]:hover svg {
+    color: #1877F2; /* Facebook blue */
+    fill: #1877F2;
+    border-color: #1877F2;
+}
+
+.lienVerReseau a[href*="instagram"]:hover,
+.lienVerReseau a[href*="instagram"]:hover i,
+.lienVerReseau a[href*="instagram"]:hover svg {
+    color: #E1306C; /* Instagram gradient start (approx) */
+    fill: #E1306C;
+    border-color: #E1306C;
+}
+
+.lienVerReseau a[href*="linkedin"]:hover,
+.lienVerReseau a[href*="linkedin"]:hover i,
+.lienVerReseau a[href*="linkedin"]:hover svg {
+    color: #0A66C2; /* LinkedIn blue */
+    fill: #0A66C2;
+    border-color: #0A66C2;
+}
+
+.lienVerReseau a[href*="tiktok"]:hover,
+.lienVerReseau a[href*="tiktok"]:hover i,
+.lienVerReseau a[href*="tiktok"]:hover svg {
+    color: #000000; /* TikTok typically shows black or neon; using black */
+    fill: #000000;
+    border-color: #000000;
+}
+
+/* If you ever use inline SVGs, ensure their paths inherit the fill */
+.lienVerReseau svg path,
+.lienVerReseau svg circle,
+.lienVerReseau svg rect {
+    fill: currentColor;
+}
+
 /* A propos Section style /////////////////////////////////////// */
 
 #aboutbox {
@@ -912,6 +1012,9 @@ header div img {
         top: 0;
     }
 
+    .lienVerReseau {
+        justify-content: center;
+    }
 
     /* A propos tablette style */
     .boxabout {
@@ -1116,6 +1219,12 @@ header div img {
         margin-top: 128px;
         top: 0;
     }
+
+    .lienVerReseau {
+        justify-content: center;
+    }
+
+    /* A propos Responsive */
 
     .boxabout {
         width: 100%;
