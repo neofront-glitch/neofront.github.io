@@ -301,13 +301,6 @@ header div img {
     color: inherit; /* inherit from the link so color hover works */
 }
 
-/* Hover states with brand colors */
-.lienVerReseau a:hover i,
-.lienVerReseau a:hover svg,
-.lienVerReseau a:hover {
-    /* transform: translateY(-4px) scale(1.03); */
-}
-
 .lienVerReseau a[href*="facebook"]:hover,
 .lienVerReseau a[href*="facebook"]:hover i,
 .lienVerReseau a[href*="facebook"]:hover svg {
