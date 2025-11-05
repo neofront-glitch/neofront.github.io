@@ -185,7 +185,8 @@ header div img {
     top: -173px;
     width: 90%;
     height: 140%;
-    border-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
     border: none;
     object-fit: cover;
     /* background: transparent; */
@@ -213,14 +214,19 @@ header div img {
 }
 
 .container div p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.container div p span {
+    color: var(--primary-color);
 }
 
 .container .detailbox .link {
     margin-top: 20px;
-    width: 100%;
+    margin-right: 50px;
+    /* width: 100%; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -228,7 +234,7 @@ header div img {
     text-decoration: none;
     background: var(--primary-color);
     padding: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: all 0.7s ease;
 }
 
@@ -409,13 +415,13 @@ header div img {
 }
 
 #aboutbox .boxabout .aboutme p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #aboutbox .boxabout .aboutme p span {
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.1rem;
+    color: rgb(45, 22, 255);
+    font-weight: inherit;
+    font-size: 1rem;
 }
 
 #aboutbox .boxabout .aboutme button {
@@ -492,7 +498,7 @@ header div img {
     background: var(--secondary-color);
     border-radius: 20px;
     box-shadow: 10px 10px 10px var(--primary-color);
-    transition: 0.3s ease-in-out;
+    transition: calc(var(--i)*0.5s) ease;
     overflow: hidden;
     min-height: 250px;
     display: flex;
@@ -826,7 +832,7 @@ header div img {
 .scroll-bottom {
     opacity: 0;
     transform: translateY(300px);
-    transition: 3s;
+    transition: 5s ease;
 }
 
 .scroll-top {
@@ -980,7 +986,8 @@ header div img {
         font-size: 1.2rem;
     }
     .container div p {
-        font-size: 1rem;
+        font-size: 1.4rem;
+        text-align: center;
     }
     .container div h1 span {
         font-size: 2rem;
@@ -1026,7 +1033,7 @@ header div img {
     }
 
     #aboutbox .boxabout .aboutme p  {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     #aboutbox .boxabout .aboutme h2 {
         font-size: 1.4rem;
@@ -1045,6 +1052,11 @@ header div img {
     #project h1 {
         font-size: 1.4rem;
         margin-top: 60px;
+    }
+
+    #project .projectbox .projectContainer .detail {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.400);
     }
 
     .projectbox {
@@ -1188,7 +1200,8 @@ header div img {
         font-size: 1.5rem;
     }
     .container div p {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        text-align: center;
     }
     .container div h1 span {
         font-size: 2rem;
@@ -1235,7 +1248,7 @@ header div img {
     }
 
     #aboutbox .boxabout .aboutme p  {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     #aboutbox .boxabout .aboutme h2 {
         font-size: 1.4rem;
@@ -1254,6 +1267,11 @@ header div img {
     #project h1 {
         font-size: 1.4rem;
         margin-top: 60px;
+    }
+
+    #project .projectbox .projectContainer .detail {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.400);
     }
 
     .projectbox {
