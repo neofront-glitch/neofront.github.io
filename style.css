@@ -823,6 +823,132 @@ header div img {
 
 /* Animation au scrolle de la page style ..........................*/
 
+/* Footer styles */
+#site-footer {
+    width: 100%;
+    padding: 40px 5%;
+    background: linear-gradient(180deg, rgba(3,0,34,0.6), var(--secondary-color));
+    color: var(--text-color);
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.95;
+    max-width: 320px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--primary-color);
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.06);
+    box-shadow: none;
+    color: var(--text-color);
+    transition: all 0.25s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 18px auto 0;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.back-to-top {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* brand hover colors for social icons in footer */
+.footer-social a[href*="facebook"]:hover { color: #1877F2; border-color: #1877F2; fill: #1877F2; }
+.footer-social a[href*="instagram"]:hover { color: #E1306C; border-color: #E1306C; fill: #E1306C; }
+.footer-social a[href*="linkedin"]:hover { color: #0A66C2; border-color: #0A66C2; fill: #0A66C2; }
+.footer-social a[href*="tiktok"]:hover { color: #000000; border-color: #000000; fill: #000000; }
+
+/* focus outlines for accessibility */
+.footer-nav a:focus,
+.footer-social a:focus,
+.back-to-top:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.15);
+    outline-offset: 3px;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container { flex-direction: column; align-items: center; text-align: center; }
+    .footer-nav { order: 3; width: 100%; justify-content: center; margin-top: 12px; }
+    .footer-brand { order: 1; }
+    .footer-social { order: 2; margin-top: 12px; }
+    .footer-bottom { justify-content: center; }
+}
+
 .scroll-scale {
     opacity: 0;
     transform: scale(.9);
